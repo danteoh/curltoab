@@ -42,7 +42,7 @@ const Converter = React.createClass({
       const baseString = `ab -n ${iterations} -c ${concurrency}`;
       let cookie = '';
 
-      if (curl.indexOf('Cookie')) {
+      if (curl.indexOf('Cookie') >= 0) {
         const cookieString = curl.match(/-H 'Cookie: (.*?)(?:'|$)/)[1];
         cookie = `-C '${cookieString}'`;
       }

@@ -49,7 +49,7 @@ var Converter = _react2.default.createClass({
       var baseString = 'ab -n ' + iterations + ' -c ' + concurrency;
       var cookie = '';
 
-      if (curl.indexOf('Cookie')) {
+      if (curl.indexOf('Cookie') >= 0) {
         var cookieString = curl.match(/-H 'Cookie: (.*?)(?:'|$)/)[1];
         cookie = '-C \'' + cookieString + '\'';
       }
