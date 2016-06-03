@@ -51,7 +51,7 @@ var Converter = _react2.default.createClass({
 
       if (curl.indexOf('Cookie')) {
         var cookieString = curl.match(/-H 'Cookie: (.*?)(?:'|$)/)[1];
-        cookie = '-C "' + cookieString + '"';
+        cookie = '-C \'' + cookieString + '\'';
       }
 
       var finalString = baseString + ' ' + cookie + ' ' + url;
